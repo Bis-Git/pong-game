@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhrrrh8lix3yu"]
+
+[ext_resource type="Script" uid="uid://blqo2l3tncwt1" path="res://scripts/sound_manager.gd" id="1_s6peo"]
+[ext_resource type="AudioStream" uid="uid://m0v5kix5ibcv" path="res://assets/sounds/paddle_hit.wav" id="2_shlr6"]
+[ext_resource type="AudioStream" uid="uid://dx6l5u8eprvyo" path="res://assets/sounds/wall_hit.wav" id="3_shlr6"]
+[ext_resource type="AudioStream" uid="uid://cit6kpef3mut7" path="res://assets/sounds/goal_score.wav" id="4_5lwbd"]
+
+[node name="SoundManager" type="Node"]
+script = ExtResource("1_s6peo")
+
+[node name="PaddleHitSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_shlr6")
+
+[node name="WallHitSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_shlr6")
+
+[node name="GoalScoredSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_5lwbd")

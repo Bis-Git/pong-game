@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dau43bplk2v75"]
+
+[ext_resource type="PackedScene" uid="uid://cjmxysxnl1mm7" path="res://scenes/menus/main_menu.tscn" id="1_nt7q6"]
+[ext_resource type="PackedScene" uid="uid://4c6pxpvykdcb" path="res://scenes/menus/pause_menu.tscn" id="2_x4jx1"]
+[ext_resource type="PackedScene" uid="uid://bj1r3v23dethr" path="res://scenes/menus/game_over_screen.tscn" id="3_yev5y"]
+[ext_resource type="PackedScene" path="res://scenes/menus/score_display.tscn" id="4_gdt2y"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="MainMenu" parent="." instance=ExtResource("1_nt7q6")]
+visible = false
+
+[node name="PauseMenu" parent="." instance=ExtResource("2_x4jx1")]
+visible = false
+
+[node name="GameOverScreen" parent="." instance=ExtResource("3_yev5y")]
+visible = false
+
+[node name="ScoreDisplay" parent="." instance=ExtResource("4_gdt2y")]
+visible = false
+layout_mode = 0
+offset_top = 0.0
+offset_bottom = 55.0

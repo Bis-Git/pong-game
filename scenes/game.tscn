@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnykcldtd0y8t"]
+
+[ext_resource type="Script" uid="uid://bgljta3aklvll" path="res://scripts/game.gd" id="1_iywne"]
+[ext_resource type="PackedScene" uid="uid://cdb0a1rrk257i" path="res://scenes/level.tscn" id="1_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://jxjcwnt0mntt" path="res://scenes/player.tscn" id="2_iywne"]
+[ext_resource type="PackedScene" uid="uid://c5ownnbxc4j6r" path="res://scenes/ball.tscn" id="3_p57ef"]
+[ext_resource type="PackedScene" path="res://scenes/menus/score_display.tscn" id="5_iywne"]
+
+[node name="Game" type="Node2D" node_paths=PackedStringArray("level", "ui", "ball")]
+script = ExtResource("1_iywne")
+level = NodePath("Level")
+ui = NodePath("ScoreDisplay")
+ball = NodePath("Ball")
+
+[node name="Level" parent="." instance=ExtResource("1_lbhrr")]
+
+[node name="PlayerOne" parent="." instance=ExtResource("2_iywne")]
+position = Vector2(50, 275)
+
+[node name="PlayerTwo" parent="." instance=ExtResource("2_iywne")]
+position = Vector2(750, 275)
+is_right_paddle = true
+is_ai_player = true
+
+[node name="Ball" parent="." instance=ExtResource("3_p57ef")]
+position = Vector2(400, 300)
+
+[node name="ScoreDisplay" parent="." instance=ExtResource("5_iywne")]
